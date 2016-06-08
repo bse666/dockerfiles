@@ -1,5 +1,7 @@
 FROM alpine:edge
 
-RUN apk update && apk add -U nmap
+RUN apk update \
+    && apk add -U nmap \
+    && rm -rf /var/cache/apk/*
 
 ENTRYPOINT [ "nmap" ]
