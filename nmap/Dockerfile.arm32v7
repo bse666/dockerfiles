@@ -1,6 +1,5 @@
-FROM arm32v6/alpine:edge
-COPY /tmp/qemu-arm-static /usr/bin/qemu-arm-static
-
+FROM arm32v7/alpine:edge
+COPY qemu-arm-static /usr/bin
 RUN apk update \
     && apk add -U nmap \
     && rm -rf /var/cache/apk/*
